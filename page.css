@@ -1,0 +1,186 @@
+:root {
+    /* These variables exist so you can make quick and simple style changes without much CSS knowledge */
+    /* applies to all areas */
+    --font-family: Calibri;
+    --font-size: 20px;
+    --line-height: 1.3em;
+    --font-color: white;
+    --link-color: white;
+    --link-text-decoration: none;
+    /* main content (between sidebars) */
+    --content-padding: 25px;
+    /* header */
+    --header-height: 270px;
+    --header-background: url('assets/lilguy.png');
+    --header-margin-bottom: 0px;
+    /* sidebar */
+    --sidebar-margin: 10px;
+    --sidebar-width: 250px;
+    --sidebar-padding: 15px;
+    /* footer */
+    --footer-height: 0px;
+    /* navbar */
+    --navitems-alignment: center;
+    --space-between-navitems: 20px;
+    --navbar-margin-bottom: 10px;
+    /* container */
+    --container-width: 1050px;
+    /* controls the gap between the content and the footer */
+    --row-gap: 0px;
+    /* To add scrollbars to your sidebars, just make the height a px value and change overflow to 'auto' */
+    --sidebar-height: 100%;
+    --sidebar-overflow: hidden;
+    /* colors */
+    --content-bg-color: 33254e;
+    --sidebar-bg-color: 33254e;
+    --footer-bg-color: 33254e;
+    --nav-bg-color: #33254e;
+    --container-bg-color: b37be0e;
+    --background-color: #5b266a;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--font-color);
+    font-kerning: normal;
+}
+
+    body a {
+        color: var(--link-color);
+        font-weight: bold;
+        text-decoration: var(--link-text-decoration);
+    }
+
+#main-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    background-color: var(--container-bg-color);
+}
+
+.flex {
+    display: flex;
+    margin-bottom: var(--row-gap);
+}
+
+.content-wrap {
+    margin-top: var(--content-margin-top);
+}
+
+#content-container {
+    width: 60%;
+    margin-bottom: var(--row-gap);
+    background-color: var(--content-bg-color);
+}
+
+#left-sidebar {
+    width: var(--sidebar-width);
+    margin-right: var(--sidebar-margin);
+    margin-bottom: var(--row-gap);
+    height: var(--sidebar-height);
+    overflow: var(--sidebar-overflow);
+    background-color: var(--sidebar-bg-color);
+}
+
+#right-sidebar {
+    width: var(--sidebar-width);
+    margin-left: var(--sidebar-margin);
+    margin-bottom: var(--row-gap);
+    height: var(--sidebar-height);
+    overflow: var(--sidebar-overflow);
+    background-color: var(--sidebar-bg-color);
+}
+
+#header-contained {
+    height: var(--header-height);
+    margin-bottom: var(--header-margin-bottom);
+    background-image: var(--header-background);
+    background-position: center center;
+}
+
+#footer {
+    height: var(--footer-height);
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--footer-bg-color);
+}
+
+#header-full {
+    display: none;
+    height: var(--header-height);
+    margin-bottom: var(--header-margin-bottom);
+    background-image: var(--header-background);
+    background-position: center center;
+}
+
+#navbar-contained {
+    margin-bottom: var(--row-gap)
+}
+
+#navbar-full {
+    display: none;
+}
+
+.nav {
+    margin-left: 0;
+    text-align: var(--navitems-alignment);
+    margin-top: 0;
+    margin-bottom: var(--navbar-margin-bottom);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: var(--nav-bg-color);
+}
+
+    .nav li {
+        display: inline-block;
+        padding-right: var(--space-between-navitems);
+    }
+
+.wrapper {
+    padding: var(--content-padding);
+    padding-top: var(--sidebar-padding);
+}
+
+.sidebar-wrapper {
+    padding: var(--sidebar-padding);
+    height: var(--sidebar-height);
+    overflow: var(--sidebar-overflow);
+}
+
+.footer-wrapper {
+    padding: 5px;
+}
+
+/* To keep your site RESPONSIVE, make sure this variable matches the width for --container-width UNLESS --container-width is 100% - if it's 100%, you'll need to manually input a breakpoint. */
+@media only screen and (max-width: 1000px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    #left-sidebar {
+        width: 100%;
+        display: block;
+        order: 2;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #right-sidebar {
+        width: 100%;
+        display: block;
+        order: 3;
+        margin-left: 0;
+    }
+
+    #content-container {
+        width: 100%;
+        display: block;
+        order: 1;
+        margin-bottom: 10px;
+    }
+}
