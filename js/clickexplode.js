@@ -2,8 +2,7 @@
 var sparks = 75; // how many sparks per clicksplosion
 var speed = 33; // how fast - smaller is faster
 var bangs = 5; // how many can be launched simultaneously (note that using too many can slow the script down)
-var colours = new Array('#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c');
-//                     blue    red     green   purple  cyan    orange  pink
+var colours = new Array('#f03', '#fff', '#000');
 
 /****************************
 *   Clicksplosion Effect    *
@@ -91,7 +90,7 @@ function eksplode(e) {
     y = (e) ? e.pageY : event.y + sdown;
     x = (e) ? e.pageX : event.x + sleft;
     N = ++count % bangs;
-    M = Math.floor(Math.random() * 3 * colours.length);
+    M = Math.floor(1 * 3 * colours.length);
     intensity[N] = 5 + Math.random() * 4;
     for (i = N * sparks; i < (N + 1) * sparks; i++) {
         Xpos[i] = x;
