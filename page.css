@@ -31,12 +31,12 @@
     --sidebar-height: 100%;
     --sidebar-overflow: hidden;
     /* colors */
-    --content-bg-color: 33254e;
-    --sidebar-bg-color: 33254e;
-    --footer-bg-color: 33254e;
-    --nav-bg-color: #33254e;
-    --container-bg-color: b37be0e;
-    --background-color: #5b266a;
+    --content-bg-color: #33254e;
+    --sidebar-bg-color: #33254e;
+    --footer-bg-color: #33254e;
+    --nav-bg-color: #291e3e;
+    --container-bg-color: #b37be0e;
+    --background-color: #491e55;
 }
 
 html,
