@@ -1,5 +1,5 @@
 // <![CDATA[
-var speed = 100; // speed of wobbling, lower is faster
+var speed = 140; // speed of wobbling, lower is faster
 var height = 1; // height of wobbling in pixels
 var alink = ""; // page to link text to (set to ="" for no link)
 
